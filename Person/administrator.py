@@ -1,12 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[10]:
-
-
-import user
-import post   
-
+from user import User
 
 class Admin(User):
     def __init__(self, user, password, admincode):
@@ -37,14 +30,14 @@ class Admin(User):
             print("Username of user {} is: {}".format([i], self.user))
 
 
-# In[ ]:
+# Creating database of admins
 
-
-
-
-
-# In[ ]:
-
+admin1 = Admin('Dan', 'password3', 'A1')
+admin2 = Admin('Amethyst', 'password4', 'A2')
+admin3 = Admin('Madison', 'password5', 'A3')
+admin4 = Admin('Abigail', 'password6', 'A4')
+admin5 = Admin('Linda', 'password7', 'A5')
+admin6 = Admin('Tom', 'password8', 'A6')
 
 
 
