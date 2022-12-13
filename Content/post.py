@@ -1,4 +1,4 @@
-from .topic import Topic
+from Content.topic import Topic
 
 class Post(Topic):
     """
@@ -14,7 +14,7 @@ class Post(Topic):
     index = 1
     def __init__(self, topicid, detail, user):
         """
-        Define the post (inheritance Topic)
+        Define the class post (inheritance Topic)
         
         Parameters
         ----------
@@ -37,14 +37,16 @@ class Post(Topic):
         Post.index += 1
         
     def add_comment(self, comment):
+        ## Function to add a comment to a post
         self.comments.append(comment)
         
     def add_like(self, num=1):
+        # Function to add a like to a post
         self.like += num
         
     def check(self):
         """
-        Display post info
+        Display post info of likes and comments, by quantity.
         
         Returns
         ----------
@@ -103,6 +105,8 @@ class Post(Topic):
         if exist == 0:
             print('[No post with this keyword.]')
 
+            
+## Post objects stored
 user1 = 'amethyst1016'
 post1 = Post(10, 'Winter break starts on December 23rd!', user1)
 post1.add_like(num=10)

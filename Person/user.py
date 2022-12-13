@@ -17,7 +17,7 @@ class User():
     
     def __init__(self, user, password):
         """
-        Define the user
+        Define the class user
         
         Parameters
         ----------

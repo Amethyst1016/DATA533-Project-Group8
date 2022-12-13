@@ -1,6 +1,6 @@
 class Topic:
     """
-    Includes topic definition and functions.
+    Includes topic class definition and functions.
     
     Parameters
     ----------
@@ -10,11 +10,11 @@ class Topic:
     """
     
     topics = [] # store all topic objects
-    topics_name = [] # store all tname
+    topics_name = [] # store all topic names (tname)
     index = 1
     def __init__(self, tname, user):
         """
-        Define the topic
+        Define class topic
         
         Parameters
         ----------
@@ -63,6 +63,8 @@ class Topic:
         if exist == 0:
             print('[No topic under this tag.]')
 
+            
+## Topic objects stored            
 topic1 = Topic('DATA533 Collaborative Software Development', 'khaladhasan')
 topic1.tag = 'DATA533'
 topic2 = Topic('DATA571 Resampling and Regularization', 'jeffandrews')
