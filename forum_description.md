@@ -1,14 +1,14 @@
-## Forum Package Description
+# Forum Package Description
 
 **Package Description:** The Forum package will allow users to search through forums (i.e. Reddit) to look at specific users, topics, and posts. It will also allow for special privileges for administrators.
 
-### Subpackages
+## Subpackages
 
 **Subpackage 1:** Person
 
 This subpackage will feature all package information surrounding users and admins, and their features and functions.
 
-Module 1 - User
+### Module 1 - User
 
 This includes the class definition of the user.
 The functions in this module include:
@@ -19,7 +19,7 @@ The functions in this module include:
 * password()
   * This allows the user to access the private attribute and change the password. 
 
-Module 2 - Administrator
+### Module 2 - Administrator
 
 This includes the class definition of admin, which has inheritance from class User.
 The functions in this module include:
@@ -36,7 +36,7 @@ The functions in this module include:
 
 This subpackage will feature all package information surrounding topics and posts, including their features and functions.
 
-Module 1 - Topic
+### Module 1 - Topic
 
 This includes the class definition of the topic.
 The functions in this module include:
@@ -49,7 +49,7 @@ The functions in this module include:
 * search()
   * This searches all topics under a given topic.
 
-Module 2 - Post
+### Module 2 - Post
 
 This includes the class definition of the admin, which has inheritance from class User.
 The functions in this module include:
