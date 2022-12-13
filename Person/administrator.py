@@ -13,7 +13,7 @@ class Admin(User):
     
     def __init__(self, user, password, admincode):
         """
-        Define the administrator (inheritance User)
+        Define the class administrator (inheritance User)
         
         Parameters
         ----------

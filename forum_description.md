@@ -16,8 +16,6 @@ The functions in this module include:
   * User is composed of a username and a password, and the password is a private attribute.
 * displayUser()
   * This formats the printed username when the user is called to be displayed.
-* exist()
-  * This function checks to see if the username currently exists in the system or not.
 * password()
   * This allows the user to access the private attribute and change the password. 
 
@@ -31,10 +29,6 @@ The functions in this module include:
   * This formats the printed username when the user is called to be displayed.
 * displayCount()
   * This checks the number of users currently registered in the system.
-* del()
-  * This allows admins to delete users from the system.
-* searchFlagInPost()
-  * This allows admins to search for a keyword or flagged content in the existing posts.
 * userlist()
   * This allows admins to see a list of registered users in the system.
 
@@ -50,8 +44,10 @@ The functions in this module include:
   * This topic class includes the tag and username.
 * tag()
   * This allows the user to access the private attribute and change the tag.
-* related()
-  * This searches other topics to view related ones. 
+* show()
+  * This displays topic info of the topic ID and topic name.
+* search()
+  * This searches all topics under a given topic.
 
 Module 2 - Post
 
@@ -65,5 +61,7 @@ The functions in this module include:
   * Allows users to add a like to a post.
 * check()
   * Allows users to check the number of likes and comments on a post.
-* show()
-  * Output of the post details in a nice output summary.
+* search_all_posts()
+  * Shows posts under a given topic.
+* search_post()
+  * Show posts with given keyword.
