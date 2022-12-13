@@ -1,30 +1,48 @@
 class User():
+    """
+    Includes User definition and functions.
     
-    #counter
-    userCount = 0 
+    Parameters
+    ----------
+    userCount: count the number of User created
+    users: list storing all current users
+    usernames: list storing all user names
+    """
     
-    # store all current users
+    userCount = 1 
+    
     users = [] 
+
+    usernames = []
     
     def __init__(self, user, password):
-        self.user = user
-        self._password = password # password is private 
-        #print('Username: {}'.format(self.user))
-        User.userCount += 1
-        if user not in self.users:
+        """
+        Define the user
+        
+        Parameters
+        ----------
+        user: the name of user
+        id: the id of user (unique)
+        password: personal password for login (private variable)
+        """
+        if user not in self.usernames:
+            self.user = user
+            self.id = User.userCount
+            self._password = password # password is private 
+            #print('Username: {}'.format(self.user))
+            User.userCount += 1
             self.users.append(self)
+            self.usernames.append(user)
         
     def displayUser(self):
-        print('Username: {}'.format(self.user))
+        """
+        Display user info
         
-        # function to see if username exists already
-    def exist(self):
-        otheruser = input("Please enter a username to see if it already exists")
-        for i in users:
-            if self.user == otheruser:
-                return "This username exists."
-        else:
-            return "This username does not exists. Please create an account."
+        Returns
+        ----------
+        The string showing username.
+        """
+        print('Username: {}'.format(self.user))
         
         # change password
     @property
@@ -34,9 +52,7 @@ class User():
     def password(self, value):
         self._password = value
 
-
 # Creating database of users
-
 user1 = User('madison13g', 'password1')
 user2 = User('amethyst1016', 'password2')
 user3 = User('khaladhasan', 'khalad1')

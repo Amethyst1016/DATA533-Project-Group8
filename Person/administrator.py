@@ -1,33 +1,61 @@
-
-from user import User
+from .user import User
 
 class Admin(User):
+    """
+    Includes Administrator definition and functions.
+    
+    Parameters
+    ----------
+    admins: list storing all administrators
+    """
+    
+    admins = []
+    
     def __init__(self, user, password, admincode):
+        """
+        Define the administrator (inheritance User)
+        
+        Parameters
+        ----------
+        amincode: like administrator id (unique)
+        """
         User.__init__(self, user, password)
         self.admincode = admincode
+        Admin.admins.append(self)
         
     def displayUser(self):
+        """
+        Display administrator info
+        
+        Returns
+        ----------
+        The string showing username and admincode.
+        """
         User.displayUser(self)
-        print('Username: {}, Admin code: {}'.format(self.user, self.admincode))
+        print('Admin code: {}'.format(self.admincode))
         
     # check number of users
     def displayCount(self):
-        print("Total Users %d" % User.userCount)
-    
-    # delete any user
-    def __del__(self, other):  # admin can do del ObjectName and it will print 'deleted'
-        print("{} deleted a user with username: {}".format(self.user, other.user))  
-    
-    # search for flagged content in posts (must have from post import post)
-    def searchFlagInPost(self, flagged_keyword):
-        for post in Post:
-            if flagged_keyword in post:
-                post.show()
+        """
+        Display the number of current users
+        
+        Returns
+        ----------
+        The string showing the number of current users.
+        """
+        print("There are ", len(User.users), " users")
     
     # print list of current users
     def userlist(self):
-        for i in users:
-            print("Username of user {} is: {}".format([i], self.user))
+        """
+        Display all user info
+        
+        Returns
+        ----------
+        The string showing all users' id and username.
+        """
+        for i in User.users:
+            print("Userid: {} Username: {}".format(i.id, i.user))
 
 
 # Creating database of admins
